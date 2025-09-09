@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo práctico integrador Css N-1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="cabecera">
+            <div class="cabecera__incio">
+                <a href="#background: #3392b8;
+                    background: linear-gradient(90deg,rgba(51, 146, 184, 1) 0%, rgba(75, 122, 93, 1) 61%, rgba(237, 221, 83, 1) 100%);" class="site-header__logo" aria-label="Inicio"> 
+                    <span class="site-header__mark" aria-hidden="true">M</span>           
+                </a>
+                <h2>Mi Tienda</h2>
+            </div>
+            <div class="cabecera__nav">
+                <nav>
+                    <button class="cabecera__nav-boton" id="boton">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6h16" /><path d="M7 12h13" /><path d="M10 18h10" /></svg>
+                    </button>
+                    <ul class="cabecera__nav-lista" id="menuLista">
+                        <li class="cabecera__nav-item"><a href="#novedades">Novedades</a></li>
+                        <li class="cabecera__nav-item"><a href="#ofertas">Ofertas</a></li>
+                        <li class="cabecera__nav-item"><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="contenedor">
+            <section class="contenedor__botones">
+                <h2 class="contenedor__botones-titulo">1) Sistema de Botones</h2>
+                <div class="btn-group">
+                    <button class="btn-group__btn ">Primario</button>
+                    <button  class="btn-group__btn btn-group__btn--secondary">Secundario</button>
+                    <button  class="btn-group__btn btn-group__btn--outline">Outline</button>
+                    <button  class="btn-group__btn btn-group__btn--danger">Peligro</button>
+                    <button  class="btn-group__btn btn-group__btn--icon">
+                        <i class="fas fa-search"></i>
+                        Con ícono
+                    </button>
+                    <button  class="btn-group__btn btn-group__btn--disabled">Deshabilitado</button>
+                </div>
+            </section>
+            <section class="contenedor__producto">
+                <h2>2) Tarjeta de Producto</h2>
+                <article class="product-card">
+                    <div class="product-card__media">
+                        <img src="zapatillas.webp" alt="foto de una zapatilla"class="product-card__imagen">
+                        <p class="product-card__badge">Nuevo</p>
+                    </div>
+                    <div class="product-card__info">
+                        <h3>Zapatillas Runner Pro</h3>
+                        <p>Amotiguación ligera, malla respirable y suela
+                            antideslizante. Perfectas para entrenar todos
+                            los días.
+                        </p>
+                    </div>
+                    <div class="product-card__precios">
+                        <p class="product-card__precios  product-card__precios--precio">$24.999</p>
+                        <p class="product-card__precios  product-card__precios--precio-antiguo">$29.999</p>
+                    </div>
+
+                    <div  class="btn-group">
+                        <button class="btn-group__btn">Comprar ahora</button>
+                        <button class="btn-group__btn btn-group__btn--añadir">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-dashed-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8.56 3.69a9 9 0 0 0 -2.92 1.95" /><path d="M3.69 8.56a9 9 0 0 0 -.69 3.44" /><path d="M3.69 15.44a9 9 0 0 0 1.95 2.92" /><path d="M8.56 20.31a9 9 0 0 0 3.44 .69" /><path d="M15.44 20.31a9 9 0 0 0 2.92 -1.95" /><path d="M20.31 15.44a9 9 0 0 0 .69 -3.44" /><path d="M20.31 8.56a9 9 0 0 0 -1.95 -2.92" /><path d="M15.44 3.69a9 9 0 0 0 -3.44 -.69" /><path d="M9 12h6" /><path d="M12 9v6" /></svg>
+                            Añadir
+                        </button>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <section class="panel">
+            <div id="novedades">
+                <h2>Novedades</h2>
+                <p>Sección de relleno para probar el menú</p>
+            </div>
+            <div id="ofertas">
+                <h2>Ofertas</h2>
+                <p>Otra sección de relleno</p>
+            </div>
+            <div id="contacto">
+                <h2>Contacto</h2>
+                <p>Más contenido de ejemplo</p>
+            </div>
+        </section>
+    </main>
+     <script>
+
+        const menuLista = document.getElementById('menuLista');
+
+        window.addEventListener('resize',()=>{
+            if (window.innerWidth > 599){
+                lista.classList.remove('ocultamiento');
+            }
+            if (window.innerWidth < 599){
+                lista.classList.add('ocultamiento');
+            }
+        });
+
+        const boton = document.getElementById('boton');
+        const lista = document.getElementById('menuLista');
+        
+        boton.addEventListener('click', ()=>{
+            lista.classList.toggle("ocultamiento")
+        });
+
+     </script>
+
+</body>
+</html>
